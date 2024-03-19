@@ -1,0 +1,133 @@
+.counter {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+#clock {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+}
+#distance {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+}
+#vitesse {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+#compteur {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+#range {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+.texte-clignotant {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.clignotant-noir {
+  color: rgb(0,0,0);
+}
+
+.clignotant-vert {
+  color: rgb(0,255,0);
+}
+
+.clignotant-rouge {
+  color: rgb(255,0,0);
+}
+
+.clignotant-animation {
+  animation: clignoter 0.5s infinite alternate;
+}
+
+@keyframes clignoter {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.indicators {
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#secondIndicator {
+  background-color: black;
+  animation: blink 2s infinite;
+}
+
+#speedIndicator {
+  background-color: black;
+}
+
+#distanceIndicator {
+  background-color: black;
+}
