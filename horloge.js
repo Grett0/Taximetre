@@ -1,3 +1,4 @@
+function old () {
 let intervalId;
 let compteur = 3;
 let compteur2 = 0;
@@ -35,6 +36,7 @@ inputElement.addEventListener('input', function() {
 
 // Mettre à jour l'horloge chaque seconde
 setInterval(updateClock, 1000);
+}
 
 function plus() {
   compteur2 + 1;
