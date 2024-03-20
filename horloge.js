@@ -1,3 +1,16 @@
+let vInst = 0;
+let dParc = 0;
+let time;
+let tdist = 0.10;
+let tHour = 36;
+let vConj = 36;
+let hz = 16.65;
+let impul = 2000;
+let t1 = 0;
+let t2 = 0;
+let tTotal = 0;
+
+
 function old () {
 let intervalId;
 let compteur = 3;
@@ -35,7 +48,7 @@ inputElement.addEventListener('input', function() {
 });
 
 // Mettre à jour l'horloge chaque seconde
-setInterval(updateClock, 1000);
+
 }
 
 function plus() {
@@ -54,6 +67,7 @@ function test() {
 }
 
 function startTimer() {
+  setInterval(updateClock, 1000);
   secondIndicatorInterval = setInterval(updateSecondIndicator, 1000);
   var displayHours = document.getElementById('hours');
   var displayMinutes = document.getElementById('minutes');
@@ -99,7 +113,7 @@ function updateClock() {
 
   var timeString = hour + ' : ' + minute + ' : ' + second;
 
-  document.getElementById('clock').textContent = timeString;
+  document.getElementById('time').textContent = timeString;
 }
 
 function updateSecondIndicator() {

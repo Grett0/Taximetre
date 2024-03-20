@@ -13,4 +13,3 @@ Variable :
 - Tarif 1 (€)
 - Tarif 2 (€)
 - Tarif total (€)
-
