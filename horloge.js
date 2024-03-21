@@ -52,7 +52,7 @@ inputElement.addEventListener('input', function() {
 }
 
 function plus() {
-  compteur2 + 1;
+  compteur2++;
   alert(compteur2);
 }
 
@@ -62,7 +62,7 @@ function moins() {
 }
 
 function test() {
-  let compteur2 = compteur;
+  compteur2 = range;
   alert(compteur2);
 }
 
