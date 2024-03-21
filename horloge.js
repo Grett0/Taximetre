@@ -9,7 +9,7 @@ let impul = 2000;
 let t1 = 0;
 let t2 = 0;
 let tTotal = 0;
-
+let time2;
 
 function old () {
 let intervalId;
@@ -69,13 +69,13 @@ function test() {
 function startTimer() {
   setInterval(updateClock, 1000);
   secondIndicatorInterval = setInterval(updateSecondIndicator, 1000);
-  var displayHours = document.getElementById('hours');
-  var displayMinutes = document.getElementById('minutes');
-  var displaySeconds = document.getElementById('seconds');
+  let displayHours = document.getElementById('hours');
+  let displayMinutes = document.getElementById('minutes');
+  let displaySeconds = document.getElementById('seconds');
 
-  var hours = 0;
-  var minutes = 0;
-  var seconds = 0;
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
 
   intervalId = setInterval(function() {
     seconds++;
@@ -95,6 +95,8 @@ function startTimer() {
 }
 
 function stopTimer() {
+  let counTime = hours + ' : ' + minutes + ' : ' + seconds;
+  document.getElementById('time2').textContent = counTime;
   clearInterval(intervalId);
   clearInterval(secondIndicatorInterval);
   clearInterval(speedIndicatorInterval);
@@ -102,16 +104,16 @@ function stopTimer() {
 }
 
 function updateClock() {
-  var now = new Date();
-  var hour = now.getHours();
-  var minute = now.getMinutes();
-  var second = now.getSeconds();
+  let now = new Date();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  let second = now.getSeconds();
 
   // Ajoute un zéro devant si les minutes/secondes sont inférieures à 10
   minute = minute < 10 ? '0' + minute : minute;
   second = second < 10 ? '0' + second : second;
 
-  var timeString = hour + ' : ' + minute + ' : ' + second;
+  let timeString = hour + ' : ' + minute + ' : ' + second;
 
   document.getElementById('time').textContent = timeString;
 }
@@ -121,8 +123,7 @@ function updateSecondIndicator() {
   setTimeout(() => {
     document.getElementById('secondIndicator').style.backgroundColor = 'transparent';
   }, 500);
-  tempsCounter++;
-  document.getElementById('tempsCounter').innerText = tempsCounter;
+
 }
 
 function increaseSpeed() {
