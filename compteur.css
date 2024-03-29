@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 18px;
+}
