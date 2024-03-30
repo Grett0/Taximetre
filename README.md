@@ -13,3 +13,6 @@ Variable :
 - Tarif 1 (€)
 - Tarif 2 (€)
 - Tarif total (€)
+
+Version web
+https://2811.fr/Taximetre/horloge.html
