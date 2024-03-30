@@ -11,7 +11,7 @@
   text-align: center;
   border: 1px solid black;
 }
-#dParc {
+#distance {
   font-size: 2em;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -24,7 +24,7 @@
   border: 1px solid black;
   padding: 5px;
 }
-#compteur {
+#speedValue {
   font-size: 2em;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -61,6 +61,7 @@ th,
 td {
   border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
+  text-align: center;
 }
 
 td:last-of-type {
@@ -130,4 +131,17 @@ tfoot td {
 
 #distanceIndicator {
   background-color: black;
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 18px;
 }
