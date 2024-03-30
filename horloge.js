@@ -1,29 +1,18 @@
-let boucle = 0;
-setInterval(updateClock, 1000);
-secondIndicatorInterval = setInterval(updateSecondIndicator, 1000);
-let displayHours = document.getElementById('hours');
-let displayMinutes = document.getElementById('minutes');
-let displaySeconds = document.getElementById('seconds');
+document.getElementById('distanceIndicator').style.backgroundColor = 'black';
+document.getElementById('distanceIndicator').classList.remove('clignotant-animation');
+document.getElementById('secondIndicator').style.backgroundColor = 'black';
+document.getElementById('secondIndicator').classList.remove('clignotant-animation');
+document.getElementById('speedIndicator').style.backgroundColor = 'black';
+document.getElementById('speedIndicator').classList.remove('clignotant-animation');
+document.getElementById('un').style.backgroundColor = 'black';
+document.getElementById('un').classList.remove('clignotant-animation');
+document.getElementById('six').style.backgroundColor = 'black';
+document.getElementById('six').classList.remove('clignotant-animation');
+document.getElementById('quatre').style.backgroundColor = 'black';
+document.getElementById('quatre').classList.remove('clignotant-animation');
+document.getElementById('tarif').style.backgroundColor = 'black';
+document.getElementById('tarif').classList.remove('clignotant-animation');
 
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
-
-intervalId = setInterval(function() {
-    seconds++;
-    if (seconds == 60) {
-        seconds = 0;
-        minutes++;
-        if (minutes == 60) {
-            minutes = 0;
-            hours++;
-        }
-    }
-
-    displayHours.textContent = (hours < 10) ? '0' + hours : hours;
-    displayMinutes.textContent = (minutes < 10) ? '0' + minutes : minutes;
-    displaySeconds.textContent = (seconds < 10) ? '0' + seconds : seconds;
-}, 1000);
 
 
 
@@ -32,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const speedRange = document.getElementById("speedRange");
     const speedValue = document.getElementById("speedValue");
     const distance = document.getElementById("distance");
+    const un = document.getElementById("un")
     const tarif = document.getElementById("tarif");
 
     let currentSpeed = 0;
@@ -114,7 +104,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function startTimer() {
-    window.location.reload(false);
+  setInterval(updateClock, 1000);
+  secondIndicatorInterval = setInterval(updateSecondIndicator, 1000);
+  let displayHours = document.getElementById('hours');
+  let displayMinutes = document.getElementById('minutes');
+  let displaySeconds = document.getElementById('seconds');
+
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+
+  intervalId = setInterval(function() {
+      seconds++;
+      if (seconds == 60) {
+          seconds = 0;
+          minutes++;
+          if (minutes == 60) {
+              minutes = 0;
+              hours++;
+          }
+      }
+
+      displayHours.textContent = (hours < 10) ? '0' + hours : hours;
+      displayMinutes.textContent = (minutes < 10) ? '0' + minutes : minutes;
+      displaySeconds.textContent = (seconds < 10) ? '0' + seconds : seconds;
+  }, 1000);
+    document.getElementById('distanceIndicator').style.backgroundColor = 'black';
+    document.getElementById('distanceIndicator').classList.remove('clignotant-animation');
+    document.getElementById('secondIndicator').style.backgroundColor = 'black';
+    document.getElementById('secondIndicator').classList.remove('clignotant-animation');
+    document.getElementById('speedIndicator').style.backgroundColor = 'black';
+    document.getElementById('speedIndicator').classList.remove('clignotant-animation');
+    document.getElementById('un').style.backgroundColor = 'green';
+    document.getElementById('un').classList.add('clignotant-animation');
+    document.getElementById('six').style.backgroundColor = 'black';
+    document.getElementById('six').classList.remove('clignotant-animation');
+    document.getElementById('quatre').style.backgroundColor = 'green';
+    document.getElementById('quatre').classList.add('clignotant-animation');
+    document.getElementById('tarif').style.backgroundColor = 'green';
+    document.getElementById('tarif').classList.add('clignotant-animation');
+
 }
 
 function stopTimer() {
