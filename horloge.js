@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkSpeedIndicator() {
         const speed = parseInt(speedValue.textContent);
         if (speed === 0) {
+            document.getElementById('quatre').style.backgroundColor = 'black';
+            document.getElementById('quatre').classList.remove('clignotant-animation');
             document.getElementById('speedIndicator').style.backgroundColor = 'black';
             document.getElementById('speedIndicator').classList.remove('clignotant-animation');
             document.getElementById('distanceIndicator').style.backgroundColor = 'black';
