@@ -97,7 +97,7 @@ tfoot td {
 }
 
 .clignotant-animation {
-  animation: clignoter 0.5s infinite alternate;
+  animation: clignoter 1s infinite alternate;
 }
 
 @keyframes clignoter {
